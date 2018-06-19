@@ -81,14 +81,14 @@ theme(text = element_text(size=6),
 a
 dev.off()
 
-####  #### WR in sympatry with Chalqueño
+########### WR in sympatry with Chalqueño
 Fst_ChTm <- Fst_5kb[,c(1,8)][Fst_5kb$id %like% "Fst_1_ChTm", ]
 wr.pops <- levels(as.factor(Fst_ChTm$id)) #Popnames
 Fst_1_ChTm.stat <- kruskal.test(x=Fst_ChTm$Fst,g= as.factor(Fst_ChTm[,1]))
 capture.output(pairwise.wilcox.test(Fst_ChTm$Fst,Fst_ChTm$id,
                                                     p.adjust.method="bonferroni"),
                file = "~/hubic/MisScripts/15.Fst_Windows/out/Stats/Fst_1_ChTm.RelabeledSamples.ph")
-####Boxplot WR in sympatry with Chalqueño
+########### Boxplot WR in sympatry with Chalqueño
 png("~/hubic/MisScripts/15.Fst_Windows/out/Plots/RelabeledSamples/ChTmPeriod.png", width = 600, height = 300)
 fill_mx <- c("red","red","black ","black","dimgray","dimgray")
 line_mx <- "gray57"
@@ -107,7 +107,7 @@ Fst_ChTm_bp + scale_x_discrete(labels=c("ChTm1984-IL1","ChTm1984-IL2","ChTm2003-
         panel.border = element_blank(),
         panel.background = element_blank()) 
 dev.off()
-####VIOLIN PLOT WR in sympatry with Chalqueño
+########### Violin plot WR in sympatry with Chalqueño
 png("~/hubic/MisScripts/15.Fst_Windows/out/Plots/RelabeledSamples/ChTmPeriod_vp.png", width = 600, height = 300)
 a <- ggplot2.violinplot(data=Fst_ChTm, xName='id',yName='Fst',
                         addMean=TRUE,meanPointShape=20, meanPointSize=3,
@@ -128,7 +128,7 @@ a <- ggplot2.violinplot(data=Fst_ChTm, xName='id',yName='Fst',
 a
 dev.off()
 
-### #### Landraces: Zamorano
+########### Landraces: Zamorano
 Fst_ZmNa <- Fst_5kb[,c(1,8)][Fst_5kb$id %like% "Fst_2_ZmNa", ] #Select the columns with id and Fst value
 class(Fst_ZmNa$id)
 lr.pops <- levels(as.factor(Fst_ZmNa$id)) #Popnames
@@ -139,7 +139,7 @@ Fst_2_ZmNa.RelabeledSamples.ph <-capture.output(pairwise.wilcox.test(Fst_ZmNa$Fs
                                                     Fst_ZmNa$id,
                                                     p.adjust.method="bonferroni"),
                                                     file = "~/hubic/MisScripts/15.Fst_Windows/out/Stats/Fst_2_ZmNa.RelabeledSamples.ph")
-####  Boxplot Zamorano
+########### Boxplot Zamorano
 png("~/hubic/MisScripts/15.Fst_Windows/out/Plots/RelabeledSamples/ZmNaPeriod_bp.png", width = 700, height = 300)
 fill.lr <- c ("dodgerblue4","dodgerblue4","dodgerblue","dodgerblue","blueviolet","blueviolet","firebrick3","firebrick3")
 line.lr <- c ("gray57")
@@ -185,14 +185,14 @@ a <- ggplot2.violinplot(data=Fst_ZmNa, xName='id',yName='Fst',
 a
 dev.off()
 
-####  #### WR in sympatry with Zamorano
+########### WR in sympatry with Zamorano
 Fst_ZmTm <- Fst_5kb[,c(1,8)][Fst_5kb$id %like% "Fst_2_ZmTm", ]
 wr.pops <- levels(as.factor(Fst_ZmTm$id)) #Popnames
 Fst_2_ZmTm.stat <- kruskal.test(x=Fst_ZmTm$Fst,g= as.factor(Fst_ZmTm[,1]))
 capture.output(pairwise.wilcox.test(Fst_ZmTm$Fst,Fst_ZmTm$id,
                                     p.adjust.method="bonferroni"),
                file = "~/hubic/MisScripts/15.Fst_Windows/out/Stats/Fst_2_ZmTm.RelabeledSamples.ph")
-####  Boxplot WR
+########### Boxplot WR in simpatry with Zamorano
 png("~/hubic/MisScripts/15.Fst_Windows/out/Plots/RelabeledSamples/ZmTmPeriod_bp.png", width = 600, height = 300)
 fill_mx <- c("red","red","black","black ","dimgray","dimgray")
 line_mx <- "gray57"
@@ -212,7 +212,7 @@ Fst_ZmTm_bp + scale_x_discrete(labels=c("ZmTm1984-IL1" ,"ZmTm1984-IL2",
         panel.border = element_blank(),
         panel.background = element_blank()) 
 dev.off()
-####VIOLIN PLOT WR with Zamorano
+########### Violin WR in simpatry with Zamorano
 png("~/hubic/MisScripts/15.Fst_Windows/out/Plots/RelabeledSamples/ZmTmPeriod_vp.png", width = 600, height = 300)
 a <- ggplot2.violinplot(data=Fst_ZmTm, xName='id',yName='Fst',
                         addMean=TRUE,meanPointShape=20, meanPointSize=3,
