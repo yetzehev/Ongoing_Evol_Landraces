@@ -92,11 +92,11 @@ The variant discovery was run with the Haplotype Caller tool of GATK. I used a m
 This scripts maps the bam file to the genome reference using GATK Haplotype Caller
 #####WARNINGS:
 Before to perform the raw SNP Calling you hava to do 2 previos steps:
-1) To do a dictionary with picard.jar
+### 1) To do a dictionary with picard.jar
 ```
 java -jar picard.jar CreateSequenceDictionary R= ~/Zmays/Zea_mays.AGPv4.dna.toplevel.fa O=~/Zmays/Zea_mays.AGPv4.dna.toplevel.fa.dict
 ```
-2) To do an index with samtools
+### 2) To do an index with samtools
 ```
 ./samtools faidx ~/Zmays/Zea_mays.AGPv4.dna.toplevel.fa
 ```
