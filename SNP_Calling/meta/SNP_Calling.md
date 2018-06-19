@@ -1,4 +1,4 @@
-#SNP Calling
+# SNP Calling
 The samples demultiplexing was performed with GBSx and the SNP Calling was done following the GATK Best Practices algoritm (https://software.broadinstitute.org/gatk/best-practices/bp_3step.php?case=GermShortWGS&p=1)
 
 Note: Check the directory darjeeling_zoology_ubc/bin/bin_SNP_Calling
@@ -16,7 +16,7 @@ C) Enzyme used to digest the samples
 java -jar ../bin/GBSX/releases/latest/GBSX_v1.3.jar -f1 ../data/C7U03ANXX_7_fastq.gz -i ../meta/C7U03ANXX_7_barcodes.txt -gzip true -o ../out_lane4/
 ```
 It step should be done in a couple of hours (or less) per lane using  a server as the CONABIO one: using 5 threats .
-##2. Alignment
+## 2. Alignment
 The  reads aligment was performed using an edited version for the script **align_process.bash**
 availaible in the github of Greg Owens: https://github.com/owensgl/argentina_helianthus/blob/master/align_process.bash
 
@@ -86,7 +86,7 @@ done < $home/meta/samplelist.txt
 ```
 
 
-##3. Variant Discovery 
+## 3. Variant Discovery 
 The variant discovery was run with the Haplotype Caller tool of GATK. I used a modified version of the script https://github.com/owensgl/argentina_helianthus/blob/master/make_gcvf_gatk.bash available at Greg Owens github.
 
 This scripts maps the bam file to the genome reference using GATK Haplotype Caller
@@ -129,7 +129,7 @@ java -Xmx50g -jar /home/rojas/bin/GenomeAnalysisTK-3.8-0-ge9d806836/GenomeAnalys
 fi
 done < /home/rojas/Zmays/C7U03ANXX_7/meta/samplelist.txt
 ```
-##4. Merge gvcf files
+## 4. Merge gvcf files
 The last step performs the SNP Calling for each sample, after this you must merge the gvcf files to get a final VCF file with all the samples and SNPs. 
 - Save all the gvcf in the same directory
 - I used a modified version of the Greg Owens script available at:
