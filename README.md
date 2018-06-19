@@ -12,5 +12,5 @@ The repository is divided in the directories decribed in the paper "The ongoing 
 6) Nucleotide_diversity_(π)
 
 Each directory contains subdirectories
-bin
-meta
+- bin
+- meta
