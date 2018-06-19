@@ -43,7 +43,6 @@ I used the next command line to insert the header for each sequence:
 The next script was used to align the demultiplexed fastq files sequenced in the lane C872HANXX_7, look for this file  in the directory SNP_Calling_v4/bin
 
 ```
-library=$1
 fastq="/home/rojas/Zmays/C872HANXX_7/fastq"
 ngm="/home/rojas/bin/miniconda3/pkgs/nextgenmap-0.5.3-0/bin/ngm"
 ref="/home/rojas/Zmays/Zea_mays.AGPv4.dna.toplevel.fa" # It is the reference genome in gz format
