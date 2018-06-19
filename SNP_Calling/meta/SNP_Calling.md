@@ -99,7 +99,7 @@ java -jar picard.jar CreateSequenceDictionary R= ~/Zmays/Zea_mays.AGPv4.dna.topl
 ```
 ./samtools faidx ~/Zmays/Zea_mays.AGPv4.dna.toplevel.fa
 ```
-#####Then, everything would be ready
+##### Then, everything would be ready
 You have to run the next script, remember modify it according to your requirements
 
 ```
