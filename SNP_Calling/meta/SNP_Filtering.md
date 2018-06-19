@@ -1,15 +1,15 @@
-##Filter options
+## Filter options
 
-###VCFtools filtering
+### VCFtools filtering
 
--Calculate mean depth
+- Calculate mean depth
 ```
 vcftools --vcf Zea_mays.AGPv4.vcf --site-mean-depth --out ./mean_depth_Zea_AGPv4
 ```
 Meand_depth result:
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
   0.000   0.156   0.789   2.465   2.984 386.200 
-#####Filters to aply
+##### Filters to aply
 **--min-meanDP**: 2x
 Includes only sites with mean depth values (over all included individuals) greater than or equal to the "--min-meanDP" value 
 
