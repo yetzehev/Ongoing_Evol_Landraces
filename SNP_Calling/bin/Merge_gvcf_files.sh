@@ -1,6 +1,6 @@
-#After run Haplotype Caller this you must merge the gvcf files to get a final VCF file with all the samples and SNPs. 
-#- Save all the gvcf in the same directory
-#- I used a modified version of the Greg Owens script available at:
+# After run Haplotype Caller you must merge the gvcf files to get a final VCF file with all the samples and SNPs. 
+# Save all the gvcf in the same directory
+# I used a modified version of the Greg Owens script available at:
 # https://github.com/owensgl/argentina_helianthus/blob/master/Genotype_gvcf.sh
 
 
