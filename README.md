@@ -2,7 +2,7 @@
 This repository contain the scripts used to  run the analysis included in the paper Ongoing evolution of maize landraces by gene flow from modern varieties
 
 ### Directories
-The repository is divided in the directories decribed in the paper "The ongoing evolution of maize (Zea mays L.) landraces and their wild relatives by gene flow from maize modern varieties"
+The repository is divided in the figure included in the paper "Ongoing evolution of maize (Zea mays L.) landraces and their wild relatives: Gene flow with modern maize varieties"
 
 1) SNP_Calling
 2) Ancestry_analysis_Admixture

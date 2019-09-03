@@ -1,0 +1,8 @@
+#Do not push bam files to git repository
+*.bam
+#Do not push plink files to git repository
+*.bed
+*.bim
+*.fam
+*.ped
+*.map
