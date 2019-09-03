@@ -5,11 +5,11 @@ This repository contain the scripts used to  run the analysis included in the pa
 The repository is divided in the directories decribed in the paper "The ongoing evolution of maize (Zea mays L.) landraces and their wild relatives by gene flow from maize modern varieties"
 
 1) SNP_Calling
-2) Ancestry_analysis_(Admixture)
-3) Gene_flow_test_(ABBA-BABA)
-4) F<sub>ST</sub>_index_across_genome
-5) Principal_Component_Analysis
-6) Nucleotide_diversity_(π)
+2) Ancestry_analysis_Admixture
+3) Gene_flow_test_ABBA-BABA
+4) FST_index_across_genome
+5) PCA
+6) Nucleotide_diversity
 
 Each directory contains subdirectories
 - bin
