@@ -1,6 +1,6 @@
 ## Fst in windows
 The Fst indexes were calculated for LR an WR, all were compared versus the two modern varieties genetic groups
-1) IModern Varieties cluster 1 (MV1) and 2 (MV2)
+1) Modern Varieties cluster 1 (MV1) and 2 (MV2)
 2) Landraces collected before 1960
 3) Landraces collected between 1960-1980
 4) Landraces collected after 2000
@@ -8,7 +8,7 @@ The Fst indexes were calculated for LR an WR, all were compared versus the two m
 6) Wild relatives: Zea mays ssp. parviglumis collected after 2000
 7) Wild relatives: Zea mays ssp. mexicana collected between 1983-1984
 8) Wild relatives: Zea mays ssp. mexicana collected after 2000
-The scripts were written by Gregory Owens and are available at https://github.com/owensgl/reformat/blob/master/vcf2vertical_bi_basic.pl
+The scripts were written by Gregory Owens and are available at https://github.com/owensgl
 
 ####Define  populations
 This script requires three files to run.
