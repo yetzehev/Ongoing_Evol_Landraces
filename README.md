@@ -1,7 +1,7 @@
 # Ongoing_Evol_Landraces
-This repository contain the data and scripts used to  run the analysis included in the paper "Contemporary evolution of maize landraces and their wild relatives influenced by gene flow with modern maize varieties"
+This repository contains the data and scripts used to  run the analysis included in the paper "Contemporary evolution of maize landraces and their wild relatives influenced by gene flow with modern maize varieties"
 
-##Prerequisites
+## Prerequisites
 
 VCFtools 0.1.15
 PLINK v1.9
@@ -14,7 +14,7 @@ custom scripts available at the github repository:
 - https://github.com/owensgl/pop_gen
 
 
-###R packages:
+### R packages:
 ggplot2
 SNPRelate
 permute
@@ -53,3 +53,4 @@ Conatains a text file that explains the steps to compute pi, theta and Tajima's 
 ###Contact
 Idalia Rojas
 icrojasb@gmail.com
+icrojasb@iecologia.unam.mx
