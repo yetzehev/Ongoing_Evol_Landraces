@@ -4,22 +4,35 @@ This repository contains the data and scripts used to  run the analysis included
 ## Prerequisites
 
 VCFtools 0.1.15
+
 PLINK v1.9
+
 R version 3.6.1
+
 Admixture 1.3
+
 FastTree
+
 angsd version: 0.921-9-ga30d0b4
+
 custom scripts available at the github repository:
+
 - https://github.com/owensgl/reformat
+
 - https://github.com/owensgl/pop_gen
 
 
 ### R packages:
 ggplot2
+
 SNPRelate
+
 permute
+
 lattice
+
 vegan
+
 RColorBrewer
 
 ### Directories
