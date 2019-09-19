@@ -63,7 +63,9 @@ Conatains a text file that explains the steps to compute pi, theta and Tajima's 
 
 
 
-###Contact
+### Contact
 Idalia Rojas
+
 icrojasb@gmail.com
+
 icrojasb@iecologia.unam.mx
