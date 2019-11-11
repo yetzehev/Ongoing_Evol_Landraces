@@ -36,21 +36,21 @@ vegan
 RColorBrewer
 
 ### Directories
-The repository is divided in the figure included in the paper "Ongoing evolution of maize (Zea mays L.) landraces and their wild relatives: Gene flow with modern maize varieties"
+The repository is divided in the figures included in the paper "Contemporary evolution of maize landraces and their wild relatives influenced by gene flow with modern maize varieties" https://doi.org/10.1073/pnas.1817664116
 
 1) SNP_Calling
-This directory contains the scripts to perform the sequence alignment and varian calling
+This directory contains the scripts to perform the sequence alignment and single nucleotide polymorphism calling
 
-2) data
+2) data available at (DOI 10.17605/OSF.IO/PQVT4)
 - bam_files: This directory contains the bam files (*.bam, *.bai) to run the gene flow analysis and to compute Tajima's D and the genetic diversity estimators: Theta and Pi.
 - Zea_mays.AGPv4.2x_0.8_0.01.NewID.Rojas2019.recode.vcf: The vcf  used to compute Fst between samples collected at different periods
 - PCA_Rojas_Romay_CMLs_LRs_MVs: The plink file use to perform the PCAs with the [Romay et al., 2013 data set](https://genomebiology.biomedcentral.com/articles/10.1186/gb-2013-14-6-r55).It includes, the landraces and modern varieties genotypes in B73_AGPv2.
 
 2) Ancestry_analysis
-Contains the command description used to run admixture.
+Contains the commands used to run admixture.
 
 3) Gene_flow_test_ABBA-BABA
-Contains the command description used to run gene flow models, and examples of metadata files. All the meta data files can be generated with the information available at meta/metadata_385_taxa_Rojas_etal_2019.txt
+Contains the commands description used to run gene flow models, and examples of metadata files. All the meta data files can be generated with the information available at meta/metadata_385_taxa_Rojas_etal_2019.txt
 
 4) FST_index_across_genome
 Contains the executable files to compute Fst per site and window, and one markdown file with examples to run the analysis
