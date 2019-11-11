@@ -41,7 +41,7 @@ The repository is divided in the figures included in the paper "Contemporary evo
 1) SNP_Calling
 This directory contains the scripts to perform the sequence alignment and single nucleotide polymorphism calling
 
-2) data available at (DOI 10.17605/OSF.IO/PQVT4)
+2) data available at (https://doi.org/10.17605/OSF.IO/PQVT4)
 - bam_files: This directory contains the bam files (*.bam, *.bai) to run the gene flow analysis and to compute Tajima's D and the genetic diversity estimators: Theta and Pi.
 - Zea_mays.AGPv4.2x_0.8_0.01.NewID.Rojas2019.recode.vcf: The vcf  used to compute Fst between samples collected at different periods
 - PCA_Rojas_Romay_CMLs_LRs_MVs: The plink file use to perform the PCAs with the [Romay et al., 2013 data set](https://genomebiology.biomedcentral.com/articles/10.1186/gb-2013-14-6-r55).It includes, the landraces and modern varieties genotypes in B73_AGPv2.
