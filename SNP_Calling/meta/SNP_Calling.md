@@ -13,7 +13,7 @@ C) Enzyme used to digest the samples
  - o: Is the path for the output file
 
 ```
-java -jar ../bin/GBSX/releases/latest/GBSX_v1.3.jar -f1 ../data/C7U03ANXX_7_fastq.gz -i ../meta/C7U03ANXX_7_barcodes.txt -gzip true -o ../out_lane4/
+java -jar ../bin/GBSX/releases/latest/GBSX_v1.3.jar --Demultiplexer -f1 ../data/C7U03ANXX_7_fastq.gz -i ../meta/C7U03ANXX_7_barcodes.txt -gzip true -o ../out_lane4/
 ```
 It step should be done in a couple of hours (or less) per lane using  a server as the CONABIO one: using 5 threats .
 ## 2. Alignment
@@ -37,7 +37,7 @@ ACACTCTTTCCCTACACGACGCTCTTCCGATCTAGGC
 ACACTCTTTCCCTACACGACGCTCTTCCGATCTGATT
 ```
 
-I used the next command line to insert the header for each sequence:
+Command line to insert the header for each sequence:
 ```awk '{print ">seq" NR} 1' file```
 
 The next script was used to align the demultiplexed fastq files sequenced in the lane C872HANXX_7, look for this file  in the directory SNP_Calling_v4/bin
@@ -88,7 +88,7 @@ done < $home/meta/samplelist.txt
 ## 3. Variant Discovery 
 The variant discovery was run with the Haplotype Caller tool of GATK. I used a modified version of the script https://github.com/owensgl/argentina_helianthus/blob/master/make_gcvf_gatk.bash available at Greg Owens github.
 
-This scripts maps the bam file to the genome reference using GATK Haplotype Caller
+This scripts maps the bam fileS to the genome reference using GATK Haplotype Caller
 ##### WARNINGS:
 Before to perform the raw SNP Calling you hava to do 2 previos steps:
 #### 1) To do a dictionary with picard.jar
