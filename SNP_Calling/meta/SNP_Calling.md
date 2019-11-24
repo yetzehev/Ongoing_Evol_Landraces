@@ -158,4 +158,4 @@ java -Xmx40g -jar /home/rojas/bin/GenomeAnalysisTK-3.8-0-ge9d806836/GenomeAnalys
         --max_alternate_alleles 4
 ```
 
-##### The output of this step is ready to be filter!!!
+##### The output from this step is ready to be filter!!!
