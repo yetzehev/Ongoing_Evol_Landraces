@@ -1,4 +1,5 @@
 # SNP Calling
+# 1. Demultiplexing
 The samples demultiplexing was performed with GBSx and the SNP Calling was done following the GATK Best Practices algoritm (https://software.broadinstitute.org/gatk/best-practices/bp_3step.php?case=GermShortWGS&p=1)
 
 Note: Check the directory darjeeling_zoology_ubc/bin/bin_SNP_Calling
@@ -25,9 +26,12 @@ This step requieres the installation of:
 - miniconda
  ```wget -c http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh
    ```
-- SamTools, I used samtools-1.5wget -c http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh. (https://github.com/samtools/samtools)
+- SamTools, I used samtools-1.5
+ ```
+wget -c http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh. (https://github.com/samtools/samtools)
+ ```
 - nextgenmap-0.5.3-0 (https://github.com/Cibiv/NextGenMap)
-- The **trimmomatic** directory has  a subdirectory called **adapters** which must contain the sequence of the adapters used to do the libraries. The file with the adapter sequences  must be in fasta format, example:
+- The **trimmomatic** directory has  a subdirectory called **adapters** that must contain the sequence of the adapters used to do the libraries. The file with the adapter sequences  must be in fasta format, example:
 ```
 >seq1
 CWGAGATCGGAAGAGCGGTTCAGCAGGAATGCCGAG
@@ -58,14 +62,12 @@ trimmed="/home/rojas/Zmays/C872HANXX_7/trimmed" #Path for temporal file
 javarules="-Djava.io.tmpdir=/home/rojas/speedy/tmp" #Do I have to create these directories: sppedy and tmp? Yes
 ncores="8" #Number opf cores used to run this process
 trim="/home/rojas/bin/trimmomatic" 
-#Should only be one raw data file in the raw_data directory (i.e. two files, R1 and R2)
-#rm $fastq/nobar*
+
 ls $fastq |grep -v nobar |  grep fastq | grep R1 | sed s/.R1.fastq.gz// | sort -r | uniq > $home/meta/samplelist.txt
 
 while read name
 do
-if [  ! -f $bam/$name.sort.bam ]; then #What is the format for the adaptors file?
-{
+if [  ! -f $bam/$name.sort.bam ]; then 
 	java -jar $trim/classes/trimmomatic.jar SE -phred33 $fastq/"$name".R1.fastq.gz $trimmed/"$name".R1.trimmed.fastq ILLUMINACLIP:$trim/adapters/adapters.fa:2:30:10:8:T SLIDINGWINDOW:4:15 MINLEN:36
     echo "Aligning paired $name"
 
@@ -91,16 +93,16 @@ The variant discovery was run with the Haplotype Caller tool of GATK. I used a m
 This scripts maps the bam fileS to the genome reference using GATK Haplotype Caller
 ##### WARNINGS:
 Before to perform the raw SNP Calling you hava to do 2 previos steps:
-#### 1) To do a dictionary with picard.jar
+#### 1) To create a dictionary with picard.jar
 ```
 java -jar picard.jar CreateSequenceDictionary R= ~/Zmays/Zea_mays.AGPv4.dna.toplevel.fa O=~/Zmays/Zea_mays.AGPv4.dna.toplevel.fa.dict
 ```
-#### 2) To do an index with samtools
+#### 2) To create an index with samtools
 ```
 ./samtools faidx ~/Zmays/Zea_mays.AGPv4.dna.toplevel.fa
 ```
-##### Then, everything would be ready
-You have to run the next script, remember modify it according to your requirements
+##### Then, everything will be ready
+You have to run the next script, remember to modify it according to your requirements
 
 ```
 #!/bin/sh
