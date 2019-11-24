@@ -59,7 +59,7 @@ project="Zmays_v4_2017" #Project name
 home="/home/rojas/Zmays/C872HANXX_7" # home directory
 bin="/home/rojas/bin" #Directory for the executable files
 trimmed="/home/rojas/Zmays/C872HANXX_7/trimmed" #Path for temporal file
-javarules="-Djava.io.tmpdir=/home/rojas/speedy/tmp" #Do I have to create these directories: sppedy and tmp? Yes
+javarules="-Djava.io.tmpdir=/home/rojas/speedy/tmp" 
 ncores="8" #Number opf cores used to run this process
 trim="/home/rojas/bin/trimmomatic" 
 
