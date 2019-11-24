@@ -1,5 +1,5 @@
 # SNP Calling
-# 1. Demultiplexing
+## 1. Demultiplexing
 The samples demultiplexing was performed with GBSx and the SNP Calling was done following the GATK Best Practices algoritm (https://software.broadinstitute.org/gatk/best-practices/bp_3step.php?case=GermShortWGS&p=1)
 
 Note: Check the directory darjeeling_zoology_ubc/bin/bin_SNP_Calling
